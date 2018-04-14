@@ -10,7 +10,7 @@
 namespace std {
   %template(StringVector) vector<string>;
   %template(IntVector) vector<int>;
-  %template(StringMap) map<string, string>;
+  //%template(StringMap) map<string, string>;   //sames conflict with %typemap
 }
 
 //
@@ -34,7 +34,6 @@ using namespace std;
 	 $result = o;
 }
 
-/*
 %typemap(in) map<string, string> dtypes {	
 	 PyObject *pKeys = PyDict_Keys( $input );
 	 int size = PyList_Size( pKeys );
@@ -54,7 +53,7 @@ using namespace std;
 	 
 	 $1 = rst;
 }
-*/
+
 //
 ////////////////////////////////////////////////////////////////////////////////
 

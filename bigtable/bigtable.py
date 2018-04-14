@@ -385,121 +385,6 @@ class IntVector(_object):
 IntVector_swigregister = _bigtable.IntVector_swigregister
 IntVector_swigregister(IntVector)
 
-class StringMap(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, StringMap, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, StringMap, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _bigtable.StringMap_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _bigtable.StringMap___nonzero__(self)
-
-    def __bool__(self):
-        return _bigtable.StringMap___bool__(self)
-
-    def __len__(self):
-        return _bigtable.StringMap___len__(self)
-    def __iter__(self):
-        return self.key_iterator()
-    def iterkeys(self):
-        return self.key_iterator()
-    def itervalues(self):
-        return self.value_iterator()
-    def iteritems(self):
-        return self.iterator()
-
-    def __getitem__(self, key):
-        return _bigtable.StringMap___getitem__(self, key)
-
-    def __delitem__(self, key):
-        return _bigtable.StringMap___delitem__(self, key)
-
-    def has_key(self, key):
-        return _bigtable.StringMap_has_key(self, key)
-
-    def keys(self):
-        return _bigtable.StringMap_keys(self)
-
-    def values(self):
-        return _bigtable.StringMap_values(self)
-
-    def items(self):
-        return _bigtable.StringMap_items(self)
-
-    def __contains__(self, key):
-        return _bigtable.StringMap___contains__(self, key)
-
-    def key_iterator(self):
-        return _bigtable.StringMap_key_iterator(self)
-
-    def value_iterator(self):
-        return _bigtable.StringMap_value_iterator(self)
-
-    def __setitem__(self, *args):
-        return _bigtable.StringMap___setitem__(self, *args)
-
-    def asdict(self):
-        return _bigtable.StringMap_asdict(self)
-
-    def __init__(self, *args):
-        this = _bigtable.new_StringMap(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-
-    def empty(self):
-        return _bigtable.StringMap_empty(self)
-
-    def size(self):
-        return _bigtable.StringMap_size(self)
-
-    def swap(self, v):
-        return _bigtable.StringMap_swap(self, v)
-
-    def begin(self):
-        return _bigtable.StringMap_begin(self)
-
-    def end(self):
-        return _bigtable.StringMap_end(self)
-
-    def rbegin(self):
-        return _bigtable.StringMap_rbegin(self)
-
-    def rend(self):
-        return _bigtable.StringMap_rend(self)
-
-    def clear(self):
-        return _bigtable.StringMap_clear(self)
-
-    def get_allocator(self):
-        return _bigtable.StringMap_get_allocator(self)
-
-    def count(self, x):
-        return _bigtable.StringMap_count(self, x)
-
-    def erase(self, *args):
-        return _bigtable.StringMap_erase(self, *args)
-
-    def find(self, x):
-        return _bigtable.StringMap_find(self, x)
-
-    def lower_bound(self, x):
-        return _bigtable.StringMap_lower_bound(self, x)
-
-    def upper_bound(self, x):
-        return _bigtable.StringMap_upper_bound(self, x)
-    __swig_destroy__ = _bigtable.delete_StringMap
-    __del__ = lambda self: None
-StringMap_swigregister = _bigtable.StringMap_swigregister
-StringMap_swigregister(StringMap)
-
 class TableRow(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, TableRow, name, value)
@@ -513,9 +398,6 @@ class TableRow(_object):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-
-    def setTypes(self, dtypes):
-        return _bigtable.TableRow_setTypes(self, dtypes)
 
     def update(self, row):
         return _bigtable.TableRow_update(self, row)
