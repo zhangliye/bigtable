@@ -3644,6 +3644,13 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include <algorithm>
 
 
+#define SWIG_FILE_WITH_INIT
+using namespace std;
+
+#include "bigtable.h"
+#include "bigtableinterface.h"
+
+
 namespace swig {
   template <class Type>
   struct noconst_traits {
@@ -5291,13 +5298,6 @@ SWIGINTERN std::vector< int >::iterator std_vector_Sl_int_Sg__erase__SWIG_0(std:
 SWIGINTERN std::vector< int >::iterator std_vector_Sl_int_Sg__erase__SWIG_1(std::vector< int > *self,std::vector< int >::iterator first,std::vector< int >::iterator last){ return self->erase(first, last); }
 SWIGINTERN std::vector< int >::iterator std_vector_Sl_int_Sg__insert__SWIG_0(std::vector< int > *self,std::vector< int >::iterator pos,std::vector< int >::value_type const &x){ return self->insert(pos, x); }
 SWIGINTERN void std_vector_Sl_int_Sg__insert__SWIG_1(std::vector< int > *self,std::vector< int >::iterator pos,std::vector< int >::size_type n,std::vector< int >::value_type const &x){ self->insert(pos, n, x); }
-
-#define SWIG_FILE_WITH_INIT
-
-using namespace std;
-#include "bigtable.h"
-#include "bigtableinterface.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -10362,6 +10362,30 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_vector_str2int(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< std::string,std::allocator< std::string > > arg1 ;
+  PyObject * obj0 = 0 ;
+  std::vector< int,std::allocator< int > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:vector_str2int",&obj0)) SWIG_fail;
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    int res = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "vector_str2int" "', argument " "1"" of type '" "std::vector< std::string,std::allocator< std::string > >""'"); 
+    }
+    arg1 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = vector_str2int(arg1);
+  resultobj = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_gcd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   int arg1 ;
@@ -10496,6 +10520,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"addFiles", _wrap_addFiles, METH_VARARGS, NULL},
 	 { (char *)"repeat", _wrap_repeat, METH_VARARGS, NULL},
 	 { (char *)"vector_int2str", _wrap_vector_int2str, METH_VARARGS, NULL},
+	 { (char *)"vector_str2int", _wrap_vector_str2int, METH_VARARGS, NULL},
 	 { (char *)"gcd", _wrap_gcd, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };

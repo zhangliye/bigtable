@@ -4,7 +4,6 @@
 #include<map>
 using namespace std;
 
-
 class TableRow {
 private:
 	string mRow;

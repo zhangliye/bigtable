@@ -453,6 +453,10 @@ def vector_int2str(input):
     return _bigtable.vector_int2str(input)
 vector_int2str = _bigtable.vector_int2str
 
+def vector_str2int(input):
+    return _bigtable.vector_str2int(input)
+vector_str2int = _bigtable.vector_str2int
+
 def gcd(x, y):
     return _bigtable.gcd(x, y)
 gcd = _bigtable.gcd

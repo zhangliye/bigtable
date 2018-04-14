@@ -10,5 +10,8 @@ bool addFiles(BigTable* self, const string s );
 
 // test functions
 string repeat(const string& s);
+
 vector<string> vector_int2str(vector<int> input);
+vector<int> vector_str2int(vector<string> input);
+
 int gcd(int x, int y);

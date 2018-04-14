@@ -6,27 +6,26 @@
 %include <std_string.i>
 %include <std_vector.i>
 %include <std_map.i>
-
-namespace std {
-  %template(StringVector) vector<string>;
-  %template(IntVector) vector<int>;
-  //%template(StringMap) map<string, string>;   //sames conflict with %typemap
-}
-
 //
 ///////////////////////////////////////////////////////////////////////////////
 
 // seciton 2, 
 %{
 #define SWIG_FILE_WITH_INIT
-
 using namespace std;
+
 #include "bigtable.h"
 #include "bigtableinterface.h"
 %}
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                 section 3,  typemap
+namespace std {
+  %template(StringVector) vector<string>;
+  %template(IntVector) vector<int>;
+  //%template(StringMap) map<string, string>;   //sames conflict with %typemap
+}
+
 %typemap(out) TableRow& {
 	 PyObject *o = PyTuple_New(2);
 	 PyTuple_SetItem(o, 0, PyInt_FromLong(12));
@@ -57,7 +56,7 @@ using namespace std;
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
+using namespace std;
 %include "bigtable.h"
 %include "bigtableinterface.h"
 

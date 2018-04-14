@@ -27,6 +27,17 @@ vector<string> vector_int2str(vector<int> input)
 	return result;
 }
 
+vector<int> vector_str2int(vector<string> input)
+{
+	vector<int> result;
+	for (vector<string>::const_iterator it = input.begin();
+		it != input.end();
+		++it) {
+		result.push_back( std::stoi(*it) );
+	}
+	return result;
+}
+
 int gcd(int x, int y) 
 {
 	return x + y;
