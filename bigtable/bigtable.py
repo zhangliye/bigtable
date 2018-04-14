@@ -159,231 +159,370 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _bigtable.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
-class vectori(_object):
+class StringVector(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, vectori, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, StringVector, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, vectori, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, StringVector, name)
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _bigtable.vectori_iterator(self)
+        return _bigtable.StringVector_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _bigtable.vectori___nonzero__(self)
+        return _bigtable.StringVector___nonzero__(self)
 
     def __bool__(self):
-        return _bigtable.vectori___bool__(self)
+        return _bigtable.StringVector___bool__(self)
 
     def __len__(self):
-        return _bigtable.vectori___len__(self)
+        return _bigtable.StringVector___len__(self)
 
     def __getslice__(self, i, j):
-        return _bigtable.vectori___getslice__(self, i, j)
+        return _bigtable.StringVector___getslice__(self, i, j)
 
     def __setslice__(self, *args):
-        return _bigtable.vectori___setslice__(self, *args)
+        return _bigtable.StringVector___setslice__(self, *args)
 
     def __delslice__(self, i, j):
-        return _bigtable.vectori___delslice__(self, i, j)
+        return _bigtable.StringVector___delslice__(self, i, j)
 
     def __delitem__(self, *args):
-        return _bigtable.vectori___delitem__(self, *args)
+        return _bigtable.StringVector___delitem__(self, *args)
 
     def __getitem__(self, *args):
-        return _bigtable.vectori___getitem__(self, *args)
+        return _bigtable.StringVector___getitem__(self, *args)
 
     def __setitem__(self, *args):
-        return _bigtable.vectori___setitem__(self, *args)
+        return _bigtable.StringVector___setitem__(self, *args)
 
     def pop(self):
-        return _bigtable.vectori_pop(self)
+        return _bigtable.StringVector_pop(self)
 
     def append(self, x):
-        return _bigtable.vectori_append(self, x)
+        return _bigtable.StringVector_append(self, x)
 
     def empty(self):
-        return _bigtable.vectori_empty(self)
+        return _bigtable.StringVector_empty(self)
 
     def size(self):
-        return _bigtable.vectori_size(self)
+        return _bigtable.StringVector_size(self)
 
     def swap(self, v):
-        return _bigtable.vectori_swap(self, v)
+        return _bigtable.StringVector_swap(self, v)
 
     def begin(self):
-        return _bigtable.vectori_begin(self)
+        return _bigtable.StringVector_begin(self)
 
     def end(self):
-        return _bigtable.vectori_end(self)
+        return _bigtable.StringVector_end(self)
 
     def rbegin(self):
-        return _bigtable.vectori_rbegin(self)
+        return _bigtable.StringVector_rbegin(self)
 
     def rend(self):
-        return _bigtable.vectori_rend(self)
+        return _bigtable.StringVector_rend(self)
 
     def clear(self):
-        return _bigtable.vectori_clear(self)
+        return _bigtable.StringVector_clear(self)
 
     def get_allocator(self):
-        return _bigtable.vectori_get_allocator(self)
+        return _bigtable.StringVector_get_allocator(self)
 
     def pop_back(self):
-        return _bigtable.vectori_pop_back(self)
+        return _bigtable.StringVector_pop_back(self)
 
     def erase(self, *args):
-        return _bigtable.vectori_erase(self, *args)
+        return _bigtable.StringVector_erase(self, *args)
 
     def __init__(self, *args):
-        this = _bigtable.new_vectori(*args)
+        this = _bigtable.new_StringVector(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def push_back(self, x):
-        return _bigtable.vectori_push_back(self, x)
+        return _bigtable.StringVector_push_back(self, x)
 
     def front(self):
-        return _bigtable.vectori_front(self)
+        return _bigtable.StringVector_front(self)
 
     def back(self):
-        return _bigtable.vectori_back(self)
+        return _bigtable.StringVector_back(self)
 
     def assign(self, n, x):
-        return _bigtable.vectori_assign(self, n, x)
+        return _bigtable.StringVector_assign(self, n, x)
 
     def resize(self, *args):
-        return _bigtable.vectori_resize(self, *args)
+        return _bigtable.StringVector_resize(self, *args)
 
     def insert(self, *args):
-        return _bigtable.vectori_insert(self, *args)
+        return _bigtable.StringVector_insert(self, *args)
 
     def reserve(self, n):
-        return _bigtable.vectori_reserve(self, n)
+        return _bigtable.StringVector_reserve(self, n)
 
     def capacity(self):
-        return _bigtable.vectori_capacity(self)
-    __swig_destroy__ = _bigtable.delete_vectori
+        return _bigtable.StringVector_capacity(self)
+    __swig_destroy__ = _bigtable.delete_StringVector
     __del__ = lambda self: None
-vectori_swigregister = _bigtable.vectori_swigregister
-vectori_swigregister(vectori)
+StringVector_swigregister = _bigtable.StringVector_swigregister
+StringVector_swigregister(StringVector)
 
-class vectord(_object):
+class IntVector(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, vectord, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IntVector, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, vectord, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, IntVector, name)
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _bigtable.vectord_iterator(self)
+        return _bigtable.IntVector_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _bigtable.vectord___nonzero__(self)
+        return _bigtable.IntVector___nonzero__(self)
 
     def __bool__(self):
-        return _bigtable.vectord___bool__(self)
+        return _bigtable.IntVector___bool__(self)
 
     def __len__(self):
-        return _bigtable.vectord___len__(self)
+        return _bigtable.IntVector___len__(self)
 
     def __getslice__(self, i, j):
-        return _bigtable.vectord___getslice__(self, i, j)
+        return _bigtable.IntVector___getslice__(self, i, j)
 
     def __setslice__(self, *args):
-        return _bigtable.vectord___setslice__(self, *args)
+        return _bigtable.IntVector___setslice__(self, *args)
 
     def __delslice__(self, i, j):
-        return _bigtable.vectord___delslice__(self, i, j)
+        return _bigtable.IntVector___delslice__(self, i, j)
 
     def __delitem__(self, *args):
-        return _bigtable.vectord___delitem__(self, *args)
+        return _bigtable.IntVector___delitem__(self, *args)
 
     def __getitem__(self, *args):
-        return _bigtable.vectord___getitem__(self, *args)
+        return _bigtable.IntVector___getitem__(self, *args)
 
     def __setitem__(self, *args):
-        return _bigtable.vectord___setitem__(self, *args)
+        return _bigtable.IntVector___setitem__(self, *args)
 
     def pop(self):
-        return _bigtable.vectord_pop(self)
+        return _bigtable.IntVector_pop(self)
 
     def append(self, x):
-        return _bigtable.vectord_append(self, x)
+        return _bigtable.IntVector_append(self, x)
 
     def empty(self):
-        return _bigtable.vectord_empty(self)
+        return _bigtable.IntVector_empty(self)
 
     def size(self):
-        return _bigtable.vectord_size(self)
+        return _bigtable.IntVector_size(self)
 
     def swap(self, v):
-        return _bigtable.vectord_swap(self, v)
+        return _bigtable.IntVector_swap(self, v)
 
     def begin(self):
-        return _bigtable.vectord_begin(self)
+        return _bigtable.IntVector_begin(self)
 
     def end(self):
-        return _bigtable.vectord_end(self)
+        return _bigtable.IntVector_end(self)
 
     def rbegin(self):
-        return _bigtable.vectord_rbegin(self)
+        return _bigtable.IntVector_rbegin(self)
 
     def rend(self):
-        return _bigtable.vectord_rend(self)
+        return _bigtable.IntVector_rend(self)
 
     def clear(self):
-        return _bigtable.vectord_clear(self)
+        return _bigtable.IntVector_clear(self)
 
     def get_allocator(self):
-        return _bigtable.vectord_get_allocator(self)
+        return _bigtable.IntVector_get_allocator(self)
 
     def pop_back(self):
-        return _bigtable.vectord_pop_back(self)
+        return _bigtable.IntVector_pop_back(self)
 
     def erase(self, *args):
-        return _bigtable.vectord_erase(self, *args)
+        return _bigtable.IntVector_erase(self, *args)
 
     def __init__(self, *args):
-        this = _bigtable.new_vectord(*args)
+        this = _bigtable.new_IntVector(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def push_back(self, x):
-        return _bigtable.vectord_push_back(self, x)
+        return _bigtable.IntVector_push_back(self, x)
 
     def front(self):
-        return _bigtable.vectord_front(self)
+        return _bigtable.IntVector_front(self)
 
     def back(self):
-        return _bigtable.vectord_back(self)
+        return _bigtable.IntVector_back(self)
 
     def assign(self, n, x):
-        return _bigtable.vectord_assign(self, n, x)
+        return _bigtable.IntVector_assign(self, n, x)
 
     def resize(self, *args):
-        return _bigtable.vectord_resize(self, *args)
+        return _bigtable.IntVector_resize(self, *args)
 
     def insert(self, *args):
-        return _bigtable.vectord_insert(self, *args)
+        return _bigtable.IntVector_insert(self, *args)
 
     def reserve(self, n):
-        return _bigtable.vectord_reserve(self, n)
+        return _bigtable.IntVector_reserve(self, n)
 
     def capacity(self):
-        return _bigtable.vectord_capacity(self)
-    __swig_destroy__ = _bigtable.delete_vectord
+        return _bigtable.IntVector_capacity(self)
+    __swig_destroy__ = _bigtable.delete_IntVector
     __del__ = lambda self: None
-vectord_swigregister = _bigtable.vectord_swigregister
-vectord_swigregister(vectord)
+IntVector_swigregister = _bigtable.IntVector_swigregister
+IntVector_swigregister(IntVector)
+
+class StringMap(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, StringMap, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, StringMap, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _bigtable.StringMap_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _bigtable.StringMap___nonzero__(self)
+
+    def __bool__(self):
+        return _bigtable.StringMap___bool__(self)
+
+    def __len__(self):
+        return _bigtable.StringMap___len__(self)
+    def __iter__(self):
+        return self.key_iterator()
+    def iterkeys(self):
+        return self.key_iterator()
+    def itervalues(self):
+        return self.value_iterator()
+    def iteritems(self):
+        return self.iterator()
+
+    def __getitem__(self, key):
+        return _bigtable.StringMap___getitem__(self, key)
+
+    def __delitem__(self, key):
+        return _bigtable.StringMap___delitem__(self, key)
+
+    def has_key(self, key):
+        return _bigtable.StringMap_has_key(self, key)
+
+    def keys(self):
+        return _bigtable.StringMap_keys(self)
+
+    def values(self):
+        return _bigtable.StringMap_values(self)
+
+    def items(self):
+        return _bigtable.StringMap_items(self)
+
+    def __contains__(self, key):
+        return _bigtable.StringMap___contains__(self, key)
+
+    def key_iterator(self):
+        return _bigtable.StringMap_key_iterator(self)
+
+    def value_iterator(self):
+        return _bigtable.StringMap_value_iterator(self)
+
+    def __setitem__(self, *args):
+        return _bigtable.StringMap___setitem__(self, *args)
+
+    def asdict(self):
+        return _bigtable.StringMap_asdict(self)
+
+    def __init__(self, *args):
+        this = _bigtable.new_StringMap(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def empty(self):
+        return _bigtable.StringMap_empty(self)
+
+    def size(self):
+        return _bigtable.StringMap_size(self)
+
+    def swap(self, v):
+        return _bigtable.StringMap_swap(self, v)
+
+    def begin(self):
+        return _bigtable.StringMap_begin(self)
+
+    def end(self):
+        return _bigtable.StringMap_end(self)
+
+    def rbegin(self):
+        return _bigtable.StringMap_rbegin(self)
+
+    def rend(self):
+        return _bigtable.StringMap_rend(self)
+
+    def clear(self):
+        return _bigtable.StringMap_clear(self)
+
+    def get_allocator(self):
+        return _bigtable.StringMap_get_allocator(self)
+
+    def count(self, x):
+        return _bigtable.StringMap_count(self, x)
+
+    def erase(self, *args):
+        return _bigtable.StringMap_erase(self, *args)
+
+    def find(self, x):
+        return _bigtable.StringMap_find(self, x)
+
+    def lower_bound(self, x):
+        return _bigtable.StringMap_lower_bound(self, x)
+
+    def upper_bound(self, x):
+        return _bigtable.StringMap_upper_bound(self, x)
+    __swig_destroy__ = _bigtable.delete_StringMap
+    __del__ = lambda self: None
+StringMap_swigregister = _bigtable.StringMap_swigregister
+StringMap_swigregister(StringMap)
+
+class TableRow(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TableRow, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TableRow, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _bigtable.new_TableRow()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def setTypes(self, dtypes):
+        return _bigtable.TableRow_setTypes(self, dtypes)
+
+    def update(self, row):
+        return _bigtable.TableRow_update(self, row)
+    __swig_destroy__ = _bigtable.delete_TableRow
+    __del__ = lambda self: None
+TableRow_swigregister = _bigtable.TableRow_swigregister
+TableRow_swigregister(TableRow)
 
 class BigTable(_object):
     __swig_setmethods__ = {}
@@ -392,12 +531,21 @@ class BigTable(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, BigTable, name)
     __repr__ = _swig_repr
 
-    def __init__(self, *args):
-        this = _bigtable.new_BigTable(*args)
+    def __init__(self):
+        this = _bigtable.new_BigTable()
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
+
+    def addFiles(self, files):
+        return _bigtable.BigTable_addFiles(self, files)
+
+    def addFile(self, s):
+        return _bigtable.BigTable_addFile(self, s)
+
+    def setTypes(self, dtypes):
+        return _bigtable.BigTable_setTypes(self, dtypes)
 
     def nextRow(self):
         return _bigtable.BigTable_nextRow(self)
@@ -406,6 +554,26 @@ class BigTable(_object):
 BigTable_swigregister = _bigtable.BigTable_swigregister
 BigTable_swigregister(BigTable)
 
+
+def createTable():
+    return _bigtable.createTable()
+createTable = _bigtable.createTable
+
+def addFiles(arg1, s):
+    return _bigtable.addFiles(arg1, s)
+addFiles = _bigtable.addFiles
+
+def repeat(s):
+    return _bigtable.repeat(s)
+repeat = _bigtable.repeat
+
+def vector_int2str(input):
+    return _bigtable.vector_int2str(input)
+vector_int2str = _bigtable.vector_int2str
+
+def gcd(x, y):
+    return _bigtable.gcd(x, y)
+gcd = _bigtable.gcd
 # This file is compatible with both classic and new-style classes.
 
 

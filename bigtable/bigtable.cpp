@@ -1,19 +1,34 @@
 // bigtable.cpp : Defines the exported functions for the DLL application.
 //
 
-#include "stdafx.h"
 #include "bigtable.h"
+#include <iostream>
+using namespace std;
 
 BigTable::BigTable()
 {
 }
 
-BigTable::BigTable(string& csvPath)
-{
-	this->mCsvPath = csvPath;
+bool BigTable::addFiles( vector<string> &files )
+{		
+	try {
+		for (int i = 0; i < this->mDataPaths.size(); ++i) {
+			this->mDataPaths.push_back(files[i]);
+		}
+	} catch (...)
+	{
+		return false;
+	}
+	return true;
 }
 
-string BigTable::nextRow()
-{
-	return ( "hello the world" );
+TableRow& BigTable::nextRow()
+{	
+	for (int i = 0; i < this->mDataPaths.size(); ++i) {
+		cout << this->mDataPaths[i] <<endl;
+	}
+	TableRow row;
+	row.update("12, 45");
+		
+	return row;
 }

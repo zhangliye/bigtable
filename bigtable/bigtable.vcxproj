@@ -80,6 +80,7 @@
     <TargetExt>.pyd</TargetExt>
     <IncludePath>E:\Anaconda2\include;$(IncludePath)</IncludePath>
     <LibraryPath>E:\Anaconda2\libs;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -92,6 +93,7 @@
     <TargetExt>.pyd</TargetExt>
     <IncludePath>E:\Anaconda2\include;$(IncludePath)</IncludePath>
     <LibraryPath>E:\Anaconda2\libs;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -164,11 +166,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bigtable.h" />
+    <ClInclude Include="bigtableinterface.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bigtable.cpp" />
+    <ClCompile Include="bigtableinterface.cpp" />
     <ClCompile Include="bigtable_wrap.cxx" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
