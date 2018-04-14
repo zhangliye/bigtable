@@ -12,6 +12,7 @@ public:
 	TableRow() {}
 	//void setTypes( map<string, string>& dtypes ) { this->mTypeMap = dtypes; }
 	void update(const string& row ) { this->mRow = row; }
+
 };
 
 class BigTable {

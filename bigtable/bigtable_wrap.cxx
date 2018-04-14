@@ -3007,30 +3007,31 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 /* -------- TYPES TABLE (BEGIN) -------- */
 
 #define SWIGTYPE_p_BigTable swig_types[0]
-#define SWIGTYPE_p_TableRow swig_types[1]
-#define SWIGTYPE_p_allocator_type swig_types[2]
-#define SWIGTYPE_p_char swig_types[3]
-#define SWIGTYPE_p_difference_type swig_types[4]
-#define SWIGTYPE_p_key_type swig_types[5]
-#define SWIGTYPE_p_mapped_type swig_types[6]
-#define SWIGTYPE_p_p_PyObject swig_types[7]
-#define SWIGTYPE_p_size_type swig_types[8]
-#define SWIGTYPE_p_std__allocatorT_int_t swig_types[9]
-#define SWIGTYPE_p_std__allocatorT_std__pairT_int_const_std__string_t_t swig_types[10]
-#define SWIGTYPE_p_std__allocatorT_std__pairT_std__string_const_int_t_t swig_types[11]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[12]
-#define SWIGTYPE_p_std__invalid_argument swig_types[13]
-#define SWIGTYPE_p_std__lessT_int_t swig_types[14]
-#define SWIGTYPE_p_std__lessT_std__string_t swig_types[15]
-#define SWIGTYPE_p_std__mapT_int_std__string_std__lessT_int_t_std__allocatorT_std__pairT_int_const_std__string_t_t_t swig_types[16]
-#define SWIGTYPE_p_std__mapT_std__string_int_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_int_t_t_t swig_types[17]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__string_t_t_t swig_types[18]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[19]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[20]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[21]
-#define SWIGTYPE_p_value_type swig_types[22]
-static swig_type_info *swig_types[24];
-static swig_module_info swig_module = {swig_types, 23, 0, 0, 0, 0};
+#define SWIGTYPE_p_Dog swig_types[1]
+#define SWIGTYPE_p_TableRow swig_types[2]
+#define SWIGTYPE_p_allocator_type swig_types[3]
+#define SWIGTYPE_p_char swig_types[4]
+#define SWIGTYPE_p_difference_type swig_types[5]
+#define SWIGTYPE_p_key_type swig_types[6]
+#define SWIGTYPE_p_mapped_type swig_types[7]
+#define SWIGTYPE_p_p_PyObject swig_types[8]
+#define SWIGTYPE_p_size_type swig_types[9]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[10]
+#define SWIGTYPE_p_std__allocatorT_std__pairT_int_const_std__string_t_t swig_types[11]
+#define SWIGTYPE_p_std__allocatorT_std__pairT_std__string_const_int_t_t swig_types[12]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[13]
+#define SWIGTYPE_p_std__invalid_argument swig_types[14]
+#define SWIGTYPE_p_std__lessT_int_t swig_types[15]
+#define SWIGTYPE_p_std__lessT_std__string_t swig_types[16]
+#define SWIGTYPE_p_std__mapT_int_std__string_std__lessT_int_t_std__allocatorT_std__pairT_int_const_std__string_t_t_t swig_types[17]
+#define SWIGTYPE_p_std__mapT_std__string_int_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_int_t_t_t swig_types[18]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__string_t_t_t swig_types[19]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[20]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[21]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[22]
+#define SWIGTYPE_p_value_type swig_types[23]
+static swig_type_info *swig_types[25];
+static swig_module_info swig_module = {swig_types, 24, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -13420,6 +13421,189 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_new_Dog(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Dog *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_Dog")) SWIG_fail;
+  result = (Dog *)new Dog();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Dog, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Dog_vector_int2str(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Dog *arg1 = (Dog *) 0 ;
+  std::vector< int > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< std::string > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Dog_vector_int2str",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Dog, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dog_vector_int2str" "', argument " "1"" of type '" "Dog *""'"); 
+  }
+  arg1 = reinterpret_cast< Dog * >(argp1);
+  {
+    std::vector< int,std::allocator< int > > *ptr = (std::vector< int,std::allocator< int > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Dog_vector_int2str" "', argument " "2"" of type '" "std::vector< int > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Dog_vector_int2str" "', argument " "2"" of type '" "std::vector< int > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  result = (arg1)->vector_int2str((std::vector< int > const &)*arg2);
+  resultobj = swig::from(static_cast< std::vector< std::string,std::allocator< std::string > > >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Dog_vector_str2int(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Dog *arg1 = (Dog *) 0 ;
+  std::vector< std::string > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< int > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Dog_vector_str2int",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Dog, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dog_vector_str2int" "', argument " "1"" of type '" "Dog *""'"); 
+  }
+  arg1 = reinterpret_cast< Dog * >(argp1);
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Dog_vector_str2int" "', argument " "2"" of type '" "std::vector< std::string > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Dog_vector_str2int" "', argument " "2"" of type '" "std::vector< std::string > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  result = (arg1)->vector_str2int((std::vector< std::string > const &)*arg2);
+  resultobj = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Dog_reverse_map(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Dog *arg1 = (Dog *) 0 ;
+  std::map< std::string,int > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::map< int,std::string > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Dog_reverse_map",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Dog, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dog_reverse_map" "', argument " "1"" of type '" "Dog *""'"); 
+  }
+  arg1 = reinterpret_cast< Dog * >(argp1);
+  {
+    std::map< std::string,int,std::less< std::string >,std::allocator< std::pair< std::string const,int > > > *ptr = (std::map< std::string,int,std::less< std::string >,std::allocator< std::pair< std::string const,int > > > *)0;
+    int res = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Dog_reverse_map" "', argument " "2"" of type '" "std::map< std::string,int >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (arg1)->reverse_map(arg2);
+  resultobj = swig::from(static_cast< std::map< int,std::string,std::less< int >,std::allocator< std::pair< int const,std::string > > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Dog_reverse_map_int2str(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Dog *arg1 = (Dog *) 0 ;
+  std::map< int,std::string > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::map< std::string,int > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Dog_reverse_map_int2str",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Dog, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dog_reverse_map_int2str" "', argument " "1"" of type '" "Dog *""'"); 
+  }
+  arg1 = reinterpret_cast< Dog * >(argp1);
+  {
+    std::map< int,std::string,std::less< int >,std::allocator< std::pair< int const,std::string > > > *ptr = (std::map< int,std::string,std::less< int >,std::allocator< std::pair< int const,std::string > > > *)0;
+    int res = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Dog_reverse_map_int2str" "', argument " "2"" of type '" "std::map< int,std::string >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (arg1)->reverse_map_int2str(arg2);
+  resultobj = swig::from(static_cast< std::map< std::string,int,std::less< std::string >,std::allocator< std::pair< std::string const,int > > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_Dog(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Dog *arg1 = (Dog *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_Dog",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Dog, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Dog" "', argument " "1"" of type '" "Dog *""'"); 
+  }
+  arg1 = reinterpret_cast< Dog * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *Dog_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_Dog, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"delete_SwigPyIterator", _wrap_delete_SwigPyIterator, METH_VARARGS, NULL},
@@ -13591,6 +13775,13 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"reverse_map", _wrap_reverse_map, METH_VARARGS, NULL},
 	 { (char *)"reverse_map_int2str", _wrap_reverse_map_int2str, METH_VARARGS, NULL},
 	 { (char *)"gcd", _wrap_gcd, METH_VARARGS, NULL},
+	 { (char *)"new_Dog", _wrap_new_Dog, METH_VARARGS, NULL},
+	 { (char *)"Dog_vector_int2str", _wrap_Dog_vector_int2str, METH_VARARGS, NULL},
+	 { (char *)"Dog_vector_str2int", _wrap_Dog_vector_str2int, METH_VARARGS, NULL},
+	 { (char *)"Dog_reverse_map", _wrap_Dog_reverse_map, METH_VARARGS, NULL},
+	 { (char *)"Dog_reverse_map_int2str", _wrap_Dog_reverse_map_int2str, METH_VARARGS, NULL},
+	 { (char *)"delete_Dog", _wrap_delete_Dog, METH_VARARGS, NULL},
+	 { (char *)"Dog_swigregister", Dog_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -13598,6 +13789,7 @@ static PyMethodDef SwigMethods[] = {
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
 static swig_type_info _swigt__p_BigTable = {"_p_BigTable", "BigTable *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Dog = {"_p_Dog", "Dog *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TableRow = {"_p_TableRow", "TableRow *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
@@ -13623,6 +13815,7 @@ static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_BigTable,
+  &_swigt__p_Dog,
   &_swigt__p_TableRow,
   &_swigt__p_allocator_type,
   &_swigt__p_char,
@@ -13648,6 +13841,7 @@ static swig_type_info *swig_type_initial[] = {
 };
 
 static swig_cast_info _swigc__p_BigTable[] = {  {&_swigt__p_BigTable, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Dog[] = {  {&_swigt__p_Dog, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TableRow[] = {  {&_swigt__p_TableRow, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -13673,6 +13867,7 @@ static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_BigTable,
+  _swigc__p_Dog,
   _swigc__p_TableRow,
   _swigc__p_allocator_type,
   _swigc__p_char,

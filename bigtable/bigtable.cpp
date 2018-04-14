@@ -32,3 +32,4 @@ TableRow& BigTable::nextRow()
 		
 	return row;
 }
+

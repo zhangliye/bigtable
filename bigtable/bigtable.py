@@ -698,6 +698,36 @@ reverse_map_int2str = _bigtable.reverse_map_int2str
 def gcd(x, y):
     return _bigtable.gcd(x, y)
 gcd = _bigtable.gcd
+class Dog(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Dog, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Dog, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _bigtable.new_Dog()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def vector_int2str(self, input):
+        return _bigtable.Dog_vector_int2str(self, input)
+
+    def vector_str2int(self, input):
+        return _bigtable.Dog_vector_str2int(self, input)
+
+    def reverse_map(self, input):
+        return _bigtable.Dog_reverse_map(self, input)
+
+    def reverse_map_int2str(self, input):
+        return _bigtable.Dog_reverse_map_int2str(self, input)
+    __swig_destroy__ = _bigtable.delete_Dog
+    __del__ = lambda self: None
+Dog_swigregister = _bigtable.Dog_swigregister
+Dog_swigregister(Dog)
+
 # This file is compatible with both classic and new-style classes.
 
 
