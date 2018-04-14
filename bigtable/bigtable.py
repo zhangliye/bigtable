@@ -621,6 +621,14 @@ class TableRow(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, TableRow, name)
     __repr__ = _swig_repr
+    __swig_setmethods__["mRow"] = _bigtable.TableRow_mRow_set
+    __swig_getmethods__["mRow"] = _bigtable.TableRow_mRow_get
+    if _newclass:
+        mRow = _swig_property(_bigtable.TableRow_mRow_get, _bigtable.TableRow_mRow_set)
+    __swig_setmethods__["mTypeMap"] = _bigtable.TableRow_mTypeMap_set
+    __swig_getmethods__["mTypeMap"] = _bigtable.TableRow_mTypeMap_get
+    if _newclass:
+        mTypeMap = _swig_property(_bigtable.TableRow_mTypeMap_get, _bigtable.TableRow_mTypeMap_set)
 
     def __init__(self):
         this = _bigtable.new_TableRow()

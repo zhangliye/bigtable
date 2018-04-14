@@ -5,7 +5,7 @@
 using namespace std;
 
 class TableRow {
-private:
+public:
 	string mRow;
 	map<string, string> mTypeMap;
 public:
@@ -21,7 +21,7 @@ private:
 	TableRow mRow;
 public:
 	BigTable();
-	bool addFiles( vector<string> &files ); 
+	bool addFiles( const vector<string> &files ); 
 	bool addFile(const string s) { return this->addFiles( vector<string>({s}) ); }
 	void setTypes( map<string, string> &dtypes) { return; }  //this->mRow.setTypes(dtypes);
 		

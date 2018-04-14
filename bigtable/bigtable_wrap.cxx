@@ -12973,6 +12973,117 @@ SWIGINTERN PyObject *Str2intMap_swigregister(PyObject *SWIGUNUSEDPARM(self), PyO
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_TableRow_mRow_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TableRow *arg1 = (TableRow *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TableRow_mRow_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TableRow, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TableRow_mRow_set" "', argument " "1"" of type '" "TableRow *""'"); 
+  }
+  arg1 = reinterpret_cast< TableRow * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TableRow_mRow_set" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TableRow_mRow_set" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  if (arg1) (arg1)->mRow = *arg2;
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TableRow_mRow_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TableRow *arg1 = (TableRow *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TableRow_mRow_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TableRow, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TableRow_mRow_get" "', argument " "1"" of type '" "TableRow *""'"); 
+  }
+  arg1 = reinterpret_cast< TableRow * >(argp1);
+  result = (std::string *) & ((arg1)->mRow);
+  resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TableRow_mTypeMap_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TableRow *arg1 = (TableRow *) 0 ;
+  std::map< std::string,std::string > *arg2 = (std::map< std::string,std::string > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TableRow_mTypeMap_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TableRow, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TableRow_mTypeMap_set" "', argument " "1"" of type '" "TableRow *""'"); 
+  }
+  arg1 = reinterpret_cast< TableRow * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__string_t_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TableRow_mTypeMap_set" "', argument " "2"" of type '" "std::map< std::string,std::string > *""'"); 
+  }
+  arg2 = reinterpret_cast< std::map< std::string,std::string > * >(argp2);
+  if (arg1) (arg1)->mTypeMap = *arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TableRow_mTypeMap_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  TableRow *arg1 = (TableRow *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::map< std::string,std::string > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TableRow_mTypeMap_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_TableRow, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TableRow_mTypeMap_get" "', argument " "1"" of type '" "TableRow *""'"); 
+  }
+  arg1 = reinterpret_cast< TableRow * >(argp1);
+  result = (std::map< std::string,std::string > *)& ((arg1)->mTypeMap);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_std__allocatorT_std__pairT_std__string_const_std__string_t_t_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_new_TableRow(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   TableRow *result = 0 ;
@@ -13070,8 +13181,7 @@ SWIGINTERN PyObject *_wrap_BigTable_addFiles(PyObject *SWIGUNUSEDPARM(self), PyO
   std::vector< std::string > *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   bool result;
@@ -13082,18 +13192,23 @@ SWIGINTERN PyObject *_wrap_BigTable_addFiles(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BigTable_addFiles" "', argument " "1"" of type '" "BigTable *""'"); 
   }
   arg1 = reinterpret_cast< BigTable * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "BigTable_addFiles" "', argument " "2"" of type '" "std::vector< std::string > &""'"); 
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "BigTable_addFiles" "', argument " "2"" of type '" "std::vector< std::string > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "BigTable_addFiles" "', argument " "2"" of type '" "std::vector< std::string > const &""'"); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "BigTable_addFiles" "', argument " "2"" of type '" "std::vector< std::string > &""'"); 
-  }
-  arg2 = reinterpret_cast< std::vector< std::string > * >(argp2);
-  result = (bool)(arg1)->addFiles(*arg2);
+  result = (bool)(arg1)->addFiles((std::vector< std::string > const &)*arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return NULL;
 }
 
@@ -13181,7 +13296,8 @@ SWIGINTERN PyObject *_wrap_BigTable_nextRow(PyObject *SWIGUNUSEDPARM(self), PyOb
   result = (TableRow *) &(arg1)->nextRow();
   {
     PyObject *o = PyTuple_New(2);
-    PyTuple_SetItem(o, 0, PyInt_FromLong(12));
+    char *par1 = const_cast<char*>(result->mRow.c_str());
+    PyTuple_SetItem(o, 0, PyString_FromString(par1));
     PyTuple_SetItem(o, 1, PyInt_FromLong(22));
     resultobj = o;
   }
@@ -13756,6 +13872,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Str2intMap_upper_bound", _wrap_Str2intMap_upper_bound, METH_VARARGS, NULL},
 	 { (char *)"delete_Str2intMap", _wrap_delete_Str2intMap, METH_VARARGS, NULL},
 	 { (char *)"Str2intMap_swigregister", Str2intMap_swigregister, METH_VARARGS, NULL},
+	 { (char *)"TableRow_mRow_set", _wrap_TableRow_mRow_set, METH_VARARGS, NULL},
+	 { (char *)"TableRow_mRow_get", _wrap_TableRow_mRow_get, METH_VARARGS, NULL},
+	 { (char *)"TableRow_mTypeMap_set", _wrap_TableRow_mTypeMap_set, METH_VARARGS, NULL},
+	 { (char *)"TableRow_mTypeMap_get", _wrap_TableRow_mTypeMap_get, METH_VARARGS, NULL},
 	 { (char *)"new_TableRow", _wrap_new_TableRow, METH_VARARGS, NULL},
 	 { (char *)"TableRow_update", _wrap_TableRow_update, METH_VARARGS, NULL},
 	 { (char *)"delete_TableRow", _wrap_delete_TableRow, METH_VARARGS, NULL},

@@ -31,7 +31,8 @@ namespace std {
 
 %typemap(out) TableRow& {
 	 PyObject *o = PyTuple_New(2);
-	 PyTuple_SetItem(o, 0, PyInt_FromLong(12));
+	 char *par1 = const_cast<char*>($1->mRow.c_str());
+	 PyTuple_SetItem(o, 0, PyString_FromString(par1));
 	 PyTuple_SetItem(o, 1, PyInt_FromLong(22));
 	 $result = o;
 }

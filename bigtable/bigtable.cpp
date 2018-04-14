@@ -9,7 +9,7 @@ BigTable::BigTable()
 {
 }
 
-bool BigTable::addFiles( vector<string> &files )
+bool BigTable::addFiles( const vector<string> &files )
 {		
 	try {
 		for (int i = 0; i < this->mDataPaths.size(); ++i) {
@@ -27,9 +27,8 @@ TableRow& BigTable::nextRow()
 	for (int i = 0; i < this->mDataPaths.size(); ++i) {
 		cout << this->mDataPaths[i] <<endl;
 	}
-	TableRow row;
-	row.update("12, 45");
+	this->mRow.update("Hello liye");
 		
-	return row;
+	return this->mRow;
 }
 
