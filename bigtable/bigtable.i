@@ -3,17 +3,17 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 //                  std declaration 
-%include <std_string.i>
-%include <std_vector.i>
-%include <std_map.i>
+%include "std_string.i"
+%include "std_vector.i"
+%include "std_map.i"
 //
 ///////////////////////////////////////////////////////////////////////////////
 
 // seciton 2, 
 %{
 #define SWIG_FILE_WITH_INIT
-using namespace std;
 
+using namespace std;
 #include "bigtable.h"
 #include "bigtableinterface.h"
 %}
@@ -24,6 +24,9 @@ namespace std {
   %template(StringVector) vector<string>;
   %template(IntVector) vector<int>;
   //%template(StringMap) map<string, string>;   //sames conflict with %typemap
+
+  %template(Int2strMap) map<int, string>;
+  %template(Str2intMap) map<string, int>;
 }
 
 %typemap(out) TableRow& {

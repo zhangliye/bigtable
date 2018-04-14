@@ -14,4 +14,7 @@ string repeat(const string& s);
 vector<string> vector_int2str(vector<int> input);
 vector<int> vector_str2int(vector<string> input);
 
+map<int, string> reverse_map(map<string, int> input);
+map<string, int> reverse_map_int2str(map<int, string> input);
+
 int gcd(int x, int y);

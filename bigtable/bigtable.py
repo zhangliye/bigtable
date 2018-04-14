@@ -385,6 +385,236 @@ class IntVector(_object):
 IntVector_swigregister = _bigtable.IntVector_swigregister
 IntVector_swigregister(IntVector)
 
+class Int2strMap(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Int2strMap, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Int2strMap, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _bigtable.Int2strMap_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _bigtable.Int2strMap___nonzero__(self)
+
+    def __bool__(self):
+        return _bigtable.Int2strMap___bool__(self)
+
+    def __len__(self):
+        return _bigtable.Int2strMap___len__(self)
+    def __iter__(self):
+        return self.key_iterator()
+    def iterkeys(self):
+        return self.key_iterator()
+    def itervalues(self):
+        return self.value_iterator()
+    def iteritems(self):
+        return self.iterator()
+
+    def __getitem__(self, key):
+        return _bigtable.Int2strMap___getitem__(self, key)
+
+    def __delitem__(self, key):
+        return _bigtable.Int2strMap___delitem__(self, key)
+
+    def has_key(self, key):
+        return _bigtable.Int2strMap_has_key(self, key)
+
+    def keys(self):
+        return _bigtable.Int2strMap_keys(self)
+
+    def values(self):
+        return _bigtable.Int2strMap_values(self)
+
+    def items(self):
+        return _bigtable.Int2strMap_items(self)
+
+    def __contains__(self, key):
+        return _bigtable.Int2strMap___contains__(self, key)
+
+    def key_iterator(self):
+        return _bigtable.Int2strMap_key_iterator(self)
+
+    def value_iterator(self):
+        return _bigtable.Int2strMap_value_iterator(self)
+
+    def __setitem__(self, *args):
+        return _bigtable.Int2strMap___setitem__(self, *args)
+
+    def asdict(self):
+        return _bigtable.Int2strMap_asdict(self)
+
+    def __init__(self, *args):
+        this = _bigtable.new_Int2strMap(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def empty(self):
+        return _bigtable.Int2strMap_empty(self)
+
+    def size(self):
+        return _bigtable.Int2strMap_size(self)
+
+    def swap(self, v):
+        return _bigtable.Int2strMap_swap(self, v)
+
+    def begin(self):
+        return _bigtable.Int2strMap_begin(self)
+
+    def end(self):
+        return _bigtable.Int2strMap_end(self)
+
+    def rbegin(self):
+        return _bigtable.Int2strMap_rbegin(self)
+
+    def rend(self):
+        return _bigtable.Int2strMap_rend(self)
+
+    def clear(self):
+        return _bigtable.Int2strMap_clear(self)
+
+    def get_allocator(self):
+        return _bigtable.Int2strMap_get_allocator(self)
+
+    def count(self, x):
+        return _bigtable.Int2strMap_count(self, x)
+
+    def erase(self, *args):
+        return _bigtable.Int2strMap_erase(self, *args)
+
+    def find(self, x):
+        return _bigtable.Int2strMap_find(self, x)
+
+    def lower_bound(self, x):
+        return _bigtable.Int2strMap_lower_bound(self, x)
+
+    def upper_bound(self, x):
+        return _bigtable.Int2strMap_upper_bound(self, x)
+    __swig_destroy__ = _bigtable.delete_Int2strMap
+    __del__ = lambda self: None
+Int2strMap_swigregister = _bigtable.Int2strMap_swigregister
+Int2strMap_swigregister(Int2strMap)
+
+class Str2intMap(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Str2intMap, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Str2intMap, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _bigtable.Str2intMap_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _bigtable.Str2intMap___nonzero__(self)
+
+    def __bool__(self):
+        return _bigtable.Str2intMap___bool__(self)
+
+    def __len__(self):
+        return _bigtable.Str2intMap___len__(self)
+    def __iter__(self):
+        return self.key_iterator()
+    def iterkeys(self):
+        return self.key_iterator()
+    def itervalues(self):
+        return self.value_iterator()
+    def iteritems(self):
+        return self.iterator()
+
+    def __getitem__(self, key):
+        return _bigtable.Str2intMap___getitem__(self, key)
+
+    def __delitem__(self, key):
+        return _bigtable.Str2intMap___delitem__(self, key)
+
+    def has_key(self, key):
+        return _bigtable.Str2intMap_has_key(self, key)
+
+    def keys(self):
+        return _bigtable.Str2intMap_keys(self)
+
+    def values(self):
+        return _bigtable.Str2intMap_values(self)
+
+    def items(self):
+        return _bigtable.Str2intMap_items(self)
+
+    def __contains__(self, key):
+        return _bigtable.Str2intMap___contains__(self, key)
+
+    def key_iterator(self):
+        return _bigtable.Str2intMap_key_iterator(self)
+
+    def value_iterator(self):
+        return _bigtable.Str2intMap_value_iterator(self)
+
+    def __setitem__(self, *args):
+        return _bigtable.Str2intMap___setitem__(self, *args)
+
+    def asdict(self):
+        return _bigtable.Str2intMap_asdict(self)
+
+    def __init__(self, *args):
+        this = _bigtable.new_Str2intMap(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def empty(self):
+        return _bigtable.Str2intMap_empty(self)
+
+    def size(self):
+        return _bigtable.Str2intMap_size(self)
+
+    def swap(self, v):
+        return _bigtable.Str2intMap_swap(self, v)
+
+    def begin(self):
+        return _bigtable.Str2intMap_begin(self)
+
+    def end(self):
+        return _bigtable.Str2intMap_end(self)
+
+    def rbegin(self):
+        return _bigtable.Str2intMap_rbegin(self)
+
+    def rend(self):
+        return _bigtable.Str2intMap_rend(self)
+
+    def clear(self):
+        return _bigtable.Str2intMap_clear(self)
+
+    def get_allocator(self):
+        return _bigtable.Str2intMap_get_allocator(self)
+
+    def count(self, x):
+        return _bigtable.Str2intMap_count(self, x)
+
+    def erase(self, *args):
+        return _bigtable.Str2intMap_erase(self, *args)
+
+    def find(self, x):
+        return _bigtable.Str2intMap_find(self, x)
+
+    def lower_bound(self, x):
+        return _bigtable.Str2intMap_lower_bound(self, x)
+
+    def upper_bound(self, x):
+        return _bigtable.Str2intMap_upper_bound(self, x)
+    __swig_destroy__ = _bigtable.delete_Str2intMap
+    __del__ = lambda self: None
+Str2intMap_swigregister = _bigtable.Str2intMap_swigregister
+Str2intMap_swigregister(Str2intMap)
+
 class TableRow(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, TableRow, name, value)
@@ -456,6 +686,14 @@ vector_int2str = _bigtable.vector_int2str
 def vector_str2int(input):
     return _bigtable.vector_str2int(input)
 vector_str2int = _bigtable.vector_str2int
+
+def reverse_map(input):
+    return _bigtable.reverse_map(input)
+reverse_map = _bigtable.reverse_map
+
+def reverse_map_int2str(input):
+    return _bigtable.reverse_map_int2str(input)
+reverse_map_int2str = _bigtable.reverse_map_int2str
 
 def gcd(x, y):
     return _bigtable.gcd(x, y)

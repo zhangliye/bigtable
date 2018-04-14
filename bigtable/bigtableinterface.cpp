@@ -38,6 +38,27 @@ vector<int> vector_str2int(vector<string> input)
 	return result;
 }
 
+map<int, string> reverse_map(map<string, int> input) {
+	map<int, string> result;
+	for (map<string, int>::const_iterator it = input.begin();
+		it != input.end();
+		++it) {
+		result[it->second] = it->first;
+	}
+	return result;
+}
+
+map<string, int> reverse_map_int2str(map<int, string> input)
+{
+	map<string, int> result;
+	for (map<int, string>::const_iterator it = input.begin();
+		it != input.end();
+		++it) {
+		result[it->second] = it->first;
+	}
+	return result;
+}
+
 int gcd(int x, int y) 
 {
 	return x + y;
