@@ -1,10 +1,19 @@
 #pragma once
 
+Input: 
 1. Input string and string past, ok
 addFile(const string s) 
+
+2. Return tuple, past
+
 2. Input from vector,   error
 std::vector< std::string > &
 
 3. Input from map, error
 map<string, string> &dtypes
+
+
+Outpub:
+[1] return tuple passed 
+TableRow& nextRow()
 
