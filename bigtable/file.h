@@ -13,7 +13,7 @@ public:
 	int mCurrentTime;
 	int mSize;
 	int mTimeCol; //start from 0
-	ifstream mFile;
+	ifstream mFile; 
 public:
 	File();
 	float read1(const string &file, int timeCol = -1);
