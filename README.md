@@ -1,11 +1,11 @@
 # BigTable
 
-A tabular data library to handle big time serial data.
+A tabular data library to handle big time serial data (big data from mobile sensors, such as GPS data and AIS data).
 
 ### Features
-1. Load data slice by slice;
-2. Speed up by the time index;
-3. Multi-core calculation; 
-4. Remote data loading;
-5. Efficient memory management;
-6. Automatical workload balancing .
+1. Multi-core calculation;  
+2. Automatical workload balancing;
+3. Efficient memory management;
+4. Load data slice by slice from big data source;
+5. Speed up by the time index;
+6. Remote data loading.
