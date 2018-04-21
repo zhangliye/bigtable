@@ -3,21 +3,27 @@
 
 #include "bigtable.h"
 #include <iostream>
+#include <limits>
 using namespace std;
 
 BigTable::BigTable()
 {
+	mMinT = std::numeric_limits<int>::max();
+	mMaxT = std::numeric_limits<int>::min();
 }
 
 bool BigTable::addFiles( const vector<string> &files )
 {		
-	cout << "addFiles" << endl;
-	cout << files.size() << endl;
 	try {
 		for (int i = 0; i < files.size(); ++i) {
-			cout << "reading: " << files[i] << endl;
-			this->mDataPaths.push_back(files[i]);
-			this->mFile.open(files[i], 1);
+			File *pFile = new File();
+			pFile->open(files[i], 1);
+			if (pFile->mStartT < mMinT)
+				mMinT = pFile->mStartT;
+			if (pFile->mEndT > mMaxT)
+				mMaxT = pFile->mEndT;
+
+			mFiles.push_back(pFile);
 		}
 	} catch (...)
 	{

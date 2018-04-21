@@ -6,54 +6,17 @@ File::File()
 	;
 }
 
-float File::read1(const string &file, int timeCol)
-{
-	clock_t t1, t2;
-	t1 = clock();
-
-	string line;
-	ifstream myfile(file);
-	if (myfile.is_open())
-	{
-		while (getline(myfile, line))
-		{
-			//cout << line << '\n';
-		}
-		myfile.close();
-	}
-	else {
-		cout << "Unable to open file";
-	}
-
-	t2 = clock();
-	return ((float)t2 - (float)t1) / 1000.;
-}
-
-float File::read2(const string &file) {
-	clock_t t1, t2;
-	t1 = clock();
-
-	ifstream in(file);
-	in.seekg(0, ios::end);
-	streampos sp = in.tellg();
-	char c;
-	for (int i = 0; i < sp; ++i)
-		in.seekg(-i, ios::end);
-	in.get(c);
-	if (c == '\n') {
-		cout << "end of line" << endl;
-	}
-	else {
-		cout << "what ??" << endl;
-	}
-
-	t2 = clock();
-	return ((float)t2 - (float)t1) / 1000.;
-}
+/*
+clock_t t1, t2;
+t1 = clock();
+t2 = clock();
+return ((float)t2 - (float)t1) / 1000.;
+*/
 
 void File::open(const string &file, int timeCol, char seperator, bool hasHead)
 {
-	this->mTimeCol = timeCol;
+	mTimeCol = timeCol;
+	mSeperator = seperator;
 	this->mFile.open(file, std::ifstream::in);
 	if (!this->mFile.is_open()) {
 		cout << "cannot open the file" << file.data() << endl;
@@ -63,7 +26,7 @@ void File::open(const string &file, int timeCol, char seperator, bool hasHead)
 	// get the time of the first line
 	this->mFile.seekg(0, ios::end);
 	streampos endPos = this->mFile.tellg();
-	mSize = endPos;
+	mSize = (int)endPos;
 	string row;
 	char c;
 	int rowIndex = 0;
@@ -86,8 +49,8 @@ void File::open(const string &file, int timeCol, char seperator, bool hasHead)
 		}
 	}
 	if (row.length() > 0) {
-		string v = split(row, seperator)[timeCol];
-		this->mStartTime = stoi(v);
+		this->mStartT = getTime(row);
+		mCurrentT = mStartT-1;         // when call nextT(), it works
 	}
 
 	// get the last row and end time 
@@ -95,7 +58,6 @@ void File::open(const string &file, int timeCol, char seperator, bool hasHead)
 	for (int i = -1; i >= -endPos; --i) {
 		this->mFile.seekg(i, ios::end);
 		this->mFile.get(c);
-		cout << i << ": " <<c << endl;
 		if (c == '\n') {
 			if (row.length()>0)
 				break;
@@ -105,25 +67,71 @@ void File::open(const string &file, int timeCol, char seperator, bool hasHead)
 	}
 
 	reverse(row.begin(), row.end());
-	if (row.length() > 0) {
-		string v = split(row, seperator)[timeCol];
-		this->mEndTime = stoi(v);
-	}
+	if (row.length() > 0)
+		this->mEndT = getTime(row);
 
-	// reserve file status
+	// currsor to the first row
 	this->mFile.seekg(0, ios::beg);
-
+	if (hasHead) {
+		string strTem;
+		getline(mFile, strTem);
+	}
+	
 	return;
 }
 
-string File::nextLine()
+int File::getTime(const string& row)
 {
-	string line;
+	string v = split(row, mSeperator)[mTimeCol];
+	try {
+		int t = stoi(v);
+		return t;
+	}
+	catch (...) {
+		return -1;
+	}
+}
+
+int File::nextT(vector<string> &rows)
+{
+	string strTem;
+	
+	streampos oldPos;
+	cout << "[[ mCurrentT: " << mCurrentT << " NextT: " << mCurrentT + 1 << " MaxT: " << mEndT << endl;
+	if (mCurrentT + 1 <= mEndT) {
+		++mCurrentT;		
+		while (true) {
+			oldPos = mFile.tellg();
+			strTem.clear();
+			getline(mFile, strTem);
+			cout << "strTem: " << strTem.data() << endl;			
+			if (getTime(strTem) == mCurrentT) {
+				rows.push_back(strTem);
+				cout << "found one" << endl;
+			}
+			else if (getTime(strTem) > mCurrentT) { // reader cursor go back 
+				mFile.seekg(oldPos);
+				//cout << "go back" << endl;
+				strTem.clear();
+				getline(mFile, strTem);
+				//cout << "Go back row: " << strTem.data() << endl;
+				break;				
+			}
+		}
+	}
+		
+	return mCurrentT;
+}
+
+bool File::nextLine(string& line)
+{
 	if (mFile.is_open()) {
-		getline(mFile, line);
-		return line;
+		if (getline(mFile, line))
+			return true;
+		else
+			return false;
 	}
 	else {
-		return "None";
+		return false;
 	}
 }

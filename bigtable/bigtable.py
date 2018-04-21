@@ -673,8 +673,11 @@ class BigTable(_object):
     def endTime(self):
         return _bigtable.BigTable_endTime(self)
 
-    def nextLine(self):
-        return _bigtable.BigTable_nextLine(self)
+    def showData(self):
+        return _bigtable.BigTable_showData(self)
+
+    def next(self):
+        return _bigtable.BigTable_next(self)
 
     def nextRow(self):
         return _bigtable.BigTable_nextRow(self)

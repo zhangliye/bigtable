@@ -9,20 +9,23 @@ using namespace std;
 
 class File {
 public:
-	int mStartTime;
-	int mEndTime;
-	int mCurrentTime;
+	int mStartT;
+	int mEndT;
+	int mCurrentT;
 	int mSize;
-	int mTimeCol; //start from 0
+
+	int mTimeCol; //time column index, start from 0
+	char mSeperator; // default is ','
 
 	ifstream mFile; 
 	int mCussor = 0;
+private:
+	int getTime(const string& row);
 public:
 	File();
 	~File() { mFile.close(); }
-	float read1(const string &file, int timeCol = -1);
-	float read2(const string &file);
 
 	void open(const string &file, int timeCol, char seperator = ',', bool hasHead=true);
-	string nextLine();
+	bool nextLine(string& line);
+	int nextT( vector<string> &rows );
 };
