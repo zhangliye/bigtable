@@ -13350,6 +13350,7 @@ SWIGINTERN PyObject *_wrap_BigTable_next(PyObject *SWIGUNUSEDPARM(self), PyObjec
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
+  int result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:BigTable_next",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BigTable, 0 |  0 );
@@ -13357,8 +13358,8 @@ SWIGINTERN PyObject *_wrap_BigTable_next(PyObject *SWIGUNUSEDPARM(self), PyObjec
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BigTable_next" "', argument " "1"" of type '" "BigTable *""'"); 
   }
   arg1 = reinterpret_cast< BigTable * >(argp1);
-  (arg1)->next();
-  resultobj = SWIG_Py_Void();
+  result = (int)(arg1)->next();
+  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;

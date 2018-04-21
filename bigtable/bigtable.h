@@ -50,13 +50,13 @@ public:
 		}
 	}
 
-	void next() {
-		cout << endl<< endl<< "next()" << endl;
+	int next() {
 		vector<string> rows;
 		int t = mFiles[0]->nextT(rows);
-		cout << "next: "<< t <<" || " << rows.size() << endl;
+		cout << "Time: "<< t << endl;
 		for (int i = 0; i < rows.size(); ++i)
 			cout << rows[i].data() << endl;
+		return t;
 	}
 		
 	TableRow& nextRow();

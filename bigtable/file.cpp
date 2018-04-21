@@ -97,27 +97,39 @@ int File::nextT(vector<string> &rows)
 	string strTem;
 	
 	streampos oldPos;
-	cout << "[[ mCurrentT: " << mCurrentT << " NextT: " << mCurrentT + 1 << " MaxT: " << mEndT << endl;
+	//cout << "NextT: " << mCurrentT + 1 << "mCurrentT: " << mCurrentT << " MaxT: " << mEndT << endl;
 	if (mCurrentT + 1 <= mEndT) {
 		++mCurrentT;		
 		while (true) {
 			oldPos = mFile.tellg();
 			strTem.clear();
-			getline(mFile, strTem);
-			cout << "strTem: " << strTem.data() << endl;			
-			if (getTime(strTem) == mCurrentT) {
-				rows.push_back(strTem);
-				cout << "found one" << endl;
+			if (getline(mFile, strTem))
+			{
+				//cout << "strTem: " << strTem.data() << endl;
+				if (getTime(strTem) == mCurrentT) {
+					rows.push_back(strTem);
+					//cout << "found one" << endl;
+				}
+				else if (getTime(strTem) > mCurrentT) { // reader cursor go back 
+					mFile.seekg(oldPos);
+					//cout << "go back" << endl;
+					strTem.clear();
+					getline(mFile, strTem);
+					//cout << "Go back row: " << strTem.data() << endl;
+					return mCurrentT;
+				}
 			}
-			else if (getTime(strTem) > mCurrentT) { // reader cursor go back 
+			else {
+				//cout << "no data " << endl;
 				mFile.seekg(oldPos);
-				//cout << "go back" << endl;
 				strTem.clear();
 				getline(mFile, strTem);
-				//cout << "Go back row: " << strTem.data() << endl;
-				break;				
+				return -1;
 			}
 		}
+	}  // the end of the file
+	else {
+		return -1;
 	}
 		
 	return mCurrentT;
