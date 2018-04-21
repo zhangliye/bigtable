@@ -1,4 +1,5 @@
 #include "file.h"
+#include "pub.h"
 
 File::File()
 {
@@ -50,78 +51,79 @@ float File::read2(const string &file) {
 	return ((float)t2 - (float)t1) / 1000.;
 }
 
-void File::open(const string &file, int timeCol, char seperator)
+void File::open(const string &file, int timeCol, char seperator, bool hasHead)
 {
-	cout << "opening file: " << endl;
 	this->mTimeCol = timeCol;
 	this->mFile.open(file, std::ifstream::in);
 	if (!this->mFile.is_open()) {
 		cout << "cannot open the file" << file.data() << endl;
 		return;
-	}		
+	}
 
 	// get the time of the first line
 	this->mFile.seekg(0, ios::end);
-	streampos end = this->mFile.tellg();
-	cout << "file length: " << end;
-	string temp;
+	streampos endPos = this->mFile.tellg();
+	mSize = endPos;
+	string row;
 	char c;
-	int col = 0;
-	for (int i = 0; i < end; ++i) {
+	int rowIndex = 0;
+	for (int i = 0; i < endPos; ++i) {
 		this->mFile.seekg(i, ios::beg);
 		this->mFile.get(c);
 		if (c == '\n') {
-			cout << "found one row" << temp.data() << endl;
-			if (col == this->mTimeCol)
-				break;
-			else
-				temp.clear();
-			++col;
+			if (hasHead && rowIndex==0) {
+				row.clear();
+				++rowIndex;
+			}
+			else {
+				if (row.length() > 0) {
+					break;
+				}
+			}
 		}
 		else {
-			temp.push_back(c);
+			row.push_back(c);
 		}
-		cout << "current value: " << temp.data() << endl;
 	}
-	if (temp.length() > 0)
-		this->mStartTime = stoi(temp);
+	if (row.length() > 0) {
+		string v = split(row, seperator)[timeCol];
+		this->mStartTime = stoi(v);
+	}
 
-	// get the time of the last line
-	temp.clear();
-	col = 0;
-	for (int i = 0; i < end; ++i) {
-		this->mFile.seekg(-i, ios::end);
+	// get the last row and end time 
+	row.clear();
+	for (int i = -1; i >= -endPos; --i) {
+		this->mFile.seekg(i, ios::end);
 		this->mFile.get(c);
+		cout << i << ": " <<c << endl;
 		if (c == '\n') {
-			if (temp.length()>0)
+			if (row.length()>0)
 				break;
-		}
-		else {
-			temp.push_back(c);
+		}else{
+			row.push_back(c);
 		}
 	}
 
-	string timeStr;
-	col = 0;
-	reverse(temp.begin(), temp.end());
-	for (int i = 0; i < temp.length(); ++i) {
-		if (temp[i] == ',') {
-			if (col == this->mTimeCol)
-				break;
-			else
-				temp.clear();
-			++col;
-		}
-		else {
-			timeStr.push_back(temp[i]);
-		}
+	reverse(row.begin(), row.end());
+	if (row.length() > 0) {
+		string v = split(row, seperator)[timeCol];
+		this->mEndTime = stoi(v);
 	}
-	if (temp.length() > 0)
-		this->mStartTime = stoi(temp);
+
+	// reserve file status
+	this->mFile.seekg(0, ios::beg);
+
 	return;
 }
 
-bool File::nextLine()
+string File::nextLine()
 {
-	return true;
+	string line;
+	if (mFile.is_open()) {
+		getline(mFile, line);
+		return line;
+	}
+	else {
+		return "None";
+	}
 }

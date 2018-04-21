@@ -673,6 +673,9 @@ class BigTable(_object):
     def endTime(self):
         return _bigtable.BigTable_endTime(self)
 
+    def nextLine(self):
+        return _bigtable.BigTable_nextLine(self)
+
     def nextRow(self):
         return _bigtable.BigTable_nextRow(self)
     __swig_destroy__ = _bigtable.delete_BigTable

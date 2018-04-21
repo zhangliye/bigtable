@@ -31,6 +31,7 @@ public:
 	void setTypes( map<string, string> &dtypes) { return; }  //this->mRow.setTypes(dtypes);
 	int startTime() { return mFile.mStartTime; }
 	int endTime() { return mFile.mEndTime; }
+	string nextLine() { return mFile.nextLine(); }
 		
 	TableRow& nextRow();
 };
