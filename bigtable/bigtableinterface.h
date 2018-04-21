@@ -1,12 +1,13 @@
 #pragma once
 #include "bigtable.h"
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 // test class
 BigTable* createTable();
 bool addFiles(BigTable* self, const string s );
-
 
 // test functions
 string repeat(const string& s);

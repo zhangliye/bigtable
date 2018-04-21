@@ -667,6 +667,12 @@ class BigTable(_object):
     def setTypes(self, dtypes):
         return _bigtable.BigTable_setTypes(self, dtypes)
 
+    def startTime(self):
+        return _bigtable.BigTable_startTime(self)
+
+    def endTime(self):
+        return _bigtable.BigTable_endTime(self)
+
     def nextRow(self):
         return _bigtable.BigTable_nextRow(self)
     __swig_destroy__ = _bigtable.delete_BigTable

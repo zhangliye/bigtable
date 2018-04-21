@@ -13279,6 +13279,50 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_BigTable_startTime(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BigTable *arg1 = (BigTable *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BigTable_startTime",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BigTable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BigTable_startTime" "', argument " "1"" of type '" "BigTable *""'"); 
+  }
+  arg1 = reinterpret_cast< BigTable * >(argp1);
+  result = (int)(arg1)->startTime();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BigTable_endTime(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BigTable *arg1 = (BigTable *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BigTable_endTime",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BigTable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BigTable_endTime" "', argument " "1"" of type '" "BigTable *""'"); 
+  }
+  arg1 = reinterpret_cast< BigTable * >(argp1);
+  result = (int)(arg1)->endTime();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_BigTable_nextRow(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BigTable *arg1 = (BigTable *) 0 ;
@@ -13884,6 +13928,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"BigTable_addFiles", _wrap_BigTable_addFiles, METH_VARARGS, NULL},
 	 { (char *)"BigTable_addFile", _wrap_BigTable_addFile, METH_VARARGS, NULL},
 	 { (char *)"BigTable_setTypes", _wrap_BigTable_setTypes, METH_VARARGS, NULL},
+	 { (char *)"BigTable_startTime", _wrap_BigTable_startTime, METH_VARARGS, NULL},
+	 { (char *)"BigTable_endTime", _wrap_BigTable_endTime, METH_VARARGS, NULL},
 	 { (char *)"BigTable_nextRow", _wrap_BigTable_nextRow, METH_VARARGS, NULL},
 	 { (char *)"delete_BigTable", _wrap_delete_BigTable, METH_VARARGS, NULL},
 	 { (char *)"BigTable_swigregister", BigTable_swigregister, METH_VARARGS, NULL},

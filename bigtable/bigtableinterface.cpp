@@ -69,7 +69,6 @@ int gcd(int x, int y)
 
 //////////////////////////////////////////////////////
 //     class interface test 
-
 vector<string> Dog::vector_int2str(const vector<int> &input)
 {
 	vector<string> result;
