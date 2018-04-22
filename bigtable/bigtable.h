@@ -58,6 +58,10 @@ public:
 			cout << rows[i].data() << endl;
 		return t;
 	}
+
+	void showT() {
+		mFiles[0]->showT();
+	}
 		
 	TableRow& nextRow();
 };

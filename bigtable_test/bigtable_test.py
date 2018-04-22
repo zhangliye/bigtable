@@ -8,8 +8,10 @@ tb = bigtable.BigTable()
 f = r'E:\test\ttt\forecasting-test\test.csv'
 tb.addFile( f )
 
-while -1 != tb.next():
-    tb.next()
+tb.showT()
+
+#while -1 != tb.next():
+#    tb.next()
 
 if False:
     import pandas as pd

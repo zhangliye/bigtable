@@ -679,6 +679,9 @@ class BigTable(_object):
     def next(self):
         return _bigtable.BigTable_next(self)
 
+    def showT(self):
+        return _bigtable.BigTable_showT(self)
+
     def nextRow(self):
         return _bigtable.BigTable_nextRow(self)
     __swig_destroy__ = _bigtable.delete_BigTable

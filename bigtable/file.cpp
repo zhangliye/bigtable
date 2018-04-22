@@ -92,36 +92,88 @@ int File::getTime(const string& row)
 	}
 }
 
+void File::showT()
+{
+	string strTem;
+
+	if (true) {
+		strTem.clear();
+		mFile.seekg(0, mFile.beg);
+		cout << "#############################" << endl;
+		while (true) {
+			strTem.clear();
+			if (getline(mFile, strTem)) {
+				cout << strTem.data() << endl;
+			}
+			else {
+				break;
+			}
+		}
+		cout << "###############################" << endl;
+	}
+
+	if (false)
+	{
+		vector<string> rows;		
+		if (mCurrentT + 1 <= mEndT) {
+			++mCurrentT;
+
+			while (true) {
+				mPreCur = mFile.tellg();
+				strTem.clear();
+				if (getline(mFile, strTem))   // cursor move to the end of the row
+				{
+					if (getTime(strTem) == mCurrentT) {  // row of the next time 
+						rows.push_back(strTem);
+					}
+					else if (getTime(strTem) > mCurrentT) { // reader cursor go back 
+						mFile.seekg(mPreCur);
+						mCurssor = mPreCur;
+						strTem.clear();
+						getline(mFile, strTem);
+						break;
+					}
+				}
+				else { // the end of the file
+					mFile.seekg(mPreCur);
+					mCurssor = mPreCur;
+					//strTem.clear();
+					//getline(mFile, strTem);
+					break;
+				}
+			}
+		}  // the end of the file
+	}
+
+
+}
+
 int File::nextT(vector<string> &rows)
 {
 	string strTem;
 	
-	streampos oldPos;
-	//cout << "NextT: " << mCurrentT + 1 << "mCurrentT: " << mCurrentT << " MaxT: " << mEndT << endl;
+	streampos mPreCur;
 	if (mCurrentT + 1 <= mEndT) {
 		++mCurrentT;		
 		while (true) {
-			oldPos = mFile.tellg();
+			mPreCur = mFile.tellg();
 			strTem.clear();
-			if (getline(mFile, strTem))
+			if (getline(mFile, strTem))   // cursor move to the end of the row
 			{
-				//cout << "strTem: " << strTem.data() << endl;
-				if (getTime(strTem) == mCurrentT) {
+				if (getTime(strTem) == mCurrentT) {  // row of the next time 
 					rows.push_back(strTem);
-					//cout << "found one" << endl;
 				}
 				else if (getTime(strTem) > mCurrentT) { // reader cursor go back 
-					mFile.seekg(oldPos);
-					//cout << "go back" << endl;
+					mFile.seekg(mPreCur);
+					mCurssor = mPreCur;
 					strTem.clear();
 					getline(mFile, strTem);
-					//cout << "Go back row: " << strTem.data() << endl;
 					return mCurrentT;
 				}
 			}
-			else {
-				//cout << "no data " << endl;
-				mFile.seekg(oldPos);
+			else { // the end of the file
+				mFile.seekg(mPreCur);
+				mCurssor = mPreCur;
 				strTem.clear();
 				getline(mFile, strTem);
 				return -1;

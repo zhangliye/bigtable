@@ -18,7 +18,10 @@ public:
 	char mSeperator; // default is ','
 
 	ifstream mFile; 
-	int mCussor = 0;
+	
+	streampos mPreCur;
+	streampos mCurssor;
+	streampos mNextCur;
 private:
 	int getTime(const string& row);
 public:
@@ -28,4 +31,6 @@ public:
 	void open(const string &file, int timeCol, char seperator = ',', bool hasHead=true);
 	bool nextLine(string& line);
 	int nextT( vector<string> &rows );
+
+	void showT();
 };

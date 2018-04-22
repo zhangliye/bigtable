@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bigtable", "bigtable\bigtable.vcxproj", "{EEBABF66-1BC1-4676-8916-5D986ED2917F}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "bigtable_python_test", "bigtable_python_test\bigtable_python_test.pyproj", "{DAD78FED-C011-44B4-B5BA-C5D6E8BC1FA5}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "bigtable_test", "bigtable_test\bigtable_test.pyproj", "{1C62213E-0155-4B53-8E32-221635B33778}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,14 +27,17 @@ Global
 		{EEBABF66-1BC1-4676-8916-5D986ED2917F}.Release|x64.Build.0 = Release|x64
 		{EEBABF66-1BC1-4676-8916-5D986ED2917F}.Release|x86.ActiveCfg = Release|Win32
 		{EEBABF66-1BC1-4676-8916-5D986ED2917F}.Release|x86.Build.0 = Release|Win32
-		{DAD78FED-C011-44B4-B5BA-C5D6E8BC1FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAD78FED-C011-44B4-B5BA-C5D6E8BC1FA5}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DAD78FED-C011-44B4-B5BA-C5D6E8BC1FA5}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DAD78FED-C011-44B4-B5BA-C5D6E8BC1FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAD78FED-C011-44B4-B5BA-C5D6E8BC1FA5}.Release|x64.ActiveCfg = Release|Any CPU
-		{DAD78FED-C011-44B4-B5BA-C5D6E8BC1FA5}.Release|x86.ActiveCfg = Release|Any CPU
+		{1C62213E-0155-4B53-8E32-221635B33778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C62213E-0155-4B53-8E32-221635B33778}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1C62213E-0155-4B53-8E32-221635B33778}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1C62213E-0155-4B53-8E32-221635B33778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C62213E-0155-4B53-8E32-221635B33778}.Release|x64.ActiveCfg = Release|Any CPU
+		{1C62213E-0155-4B53-8E32-221635B33778}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {679F70E8-2826-4CD3-831D-3B23581BD9CE}
 	EndGlobalSection
 EndGlobal

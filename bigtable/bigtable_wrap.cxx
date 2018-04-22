@@ -13366,6 +13366,27 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_BigTable_showT(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BigTable *arg1 = (BigTable *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BigTable_showT",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BigTable, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BigTable_showT" "', argument " "1"" of type '" "BigTable *""'"); 
+  }
+  arg1 = reinterpret_cast< BigTable * >(argp1);
+  (arg1)->showT();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_BigTable_nextRow(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BigTable *arg1 = (BigTable *) 0 ;
@@ -13975,6 +13996,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"BigTable_endTime", _wrap_BigTable_endTime, METH_VARARGS, NULL},
 	 { (char *)"BigTable_showData", _wrap_BigTable_showData, METH_VARARGS, NULL},
 	 { (char *)"BigTable_next", _wrap_BigTable_next, METH_VARARGS, NULL},
+	 { (char *)"BigTable_showT", _wrap_BigTable_showT, METH_VARARGS, NULL},
 	 { (char *)"BigTable_nextRow", _wrap_BigTable_nextRow, METH_VARARGS, NULL},
 	 { (char *)"delete_BigTable", _wrap_delete_BigTable, METH_VARARGS, NULL},
 	 { (char *)"BigTable_swigregister", BigTable_swigregister, METH_VARARGS, NULL},
